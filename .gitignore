@@ -13,6 +13,10 @@
 .project
 .settings/
 
+# Maven #
+log/
+target/
+
 *.iml
 .idea/*
 
