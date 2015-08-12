@@ -22,4 +22,8 @@ public class LibraryEntity {
 	
 	@OneToMany(cascade = CascadeType.REMOVE)
 	private Set<BookEntity> books;
+
+	public String getName() {
+		return this.name;
+	}
 }

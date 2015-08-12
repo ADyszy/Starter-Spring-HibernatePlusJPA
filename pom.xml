@@ -183,7 +183,7 @@
                 <configuration>
                     <argLine>-Dfile.encoding=UTF-8</argLine>
                 </configuration>
-            </plugin>
+            </plugin>	
         </plugins>
     </build>
 
