@@ -21,6 +21,9 @@ public class LibraryRepositoryTest {
 	@Autowired
 	private LibraryRepository libraryRepository;
 	
+	@Autowired
+	private BookRepository bookRepository;
+	
 	@Test
 	public void testShouldFindLibraryByName() {
 		// given
@@ -42,6 +45,16 @@ public class LibraryRepositoryTest {
 		assertNotNull(libraryEntities);
 		assertFalse(libraryEntities.isEmpty());
 		assertEquals("Biblioteka Miejska", libraryEntities.get(0).getName());
+	}
+	
+	@Test
+	public void testShouldDeleteAllBooksBelongingToRemovedLibraryWhichMeansAllBooks() {
+		// given
+		final long libId = 1L;
+		// when
+		libraryRepository.delete(libraryRepository.findOne(libId));		
+		// then
+		assertEquals(0, bookRepository.count());
 	}
 	
 }
