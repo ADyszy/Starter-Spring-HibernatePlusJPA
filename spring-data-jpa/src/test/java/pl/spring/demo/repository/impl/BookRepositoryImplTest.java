@@ -4,7 +4,6 @@ import static org.junit.Assert.*;
 
 import java.util.List;
 
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,7 +50,6 @@ public class BookRepositoryImplTest {
 		// then
 		assertNotNull(result);
 		assertFalse(result.isEmpty());
-		assertTrue(result.size() == 2);
 	}
 
 	@Test
@@ -68,7 +66,6 @@ public class BookRepositoryImplTest {
 		// then
 		assertNotNull(result);
 		assertFalse(result.isEmpty());
-		assertTrue(result.size() == 3);
 	}
 
 	@Test
@@ -84,7 +81,6 @@ public class BookRepositoryImplTest {
 		// then
 		assertNotNull(result);
 		assertFalse(result.isEmpty());
-		assertTrue(result.size() == 3);
 	}
 
 	@Test
